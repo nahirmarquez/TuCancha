@@ -1,0 +1,17 @@
+<div data-role="page" id="home" data-title="Home">
+    <div data-role="header" data-position="inline" data-theme="a">
+<h1>Editar Local Deportivo</h1>
+
+	</div><!-- /header -->
+    <div data-role="content">
+
+<%= render 'form' %>
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+
+<%= link_to 'Mostrar', @local_deportivo %> |
+<%= link_to 'Regresar', local_deportivos_path %>
+
+    </div><!-- /footer -->
+</div><!-- /page home -->

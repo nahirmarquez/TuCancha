@@ -1,0 +1,41 @@
+<div data-role="page" id="home" data-title="Home">
+    <div data-role="header" data-position="inline" data-theme="a">
+<h1>Listado de Locales Deportivos</h1>
+	</div><!-- /header -->
+    <div data-role="content">
+        
+<table width="80%">
+  <tr>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Contacto</th>
+    <th>Telefono</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @local_deportivos.each do |local_deportivo| %>
+  <tr>
+    <td><%= local_deportivo.nombre %></td>
+    <td><%= local_deportivo.direccion %></td>
+    <td><%= local_deportivo.contacto %></td>
+    <td><%= local_deportivo.telefono %></td>
+    <td><%= local_deportivo.email %></td>
+    <td><%= link_to 'Mostrar', local_deportivo %></td>
+    <td><%= link_to 'Editar', edit_local_deportivo_path(local_deportivo) %></td>
+    <td><%= link_to 'Eliminar', local_deportivo, confirm: '¿Está seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+
+<%= link_to 'Nuevo Local Deportivo', new_local_deportivo_path %>
+
+    </div><!-- /footer -->
+</div><!-- /page home -->

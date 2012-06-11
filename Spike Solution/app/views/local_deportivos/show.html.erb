@@ -1,0 +1,53 @@
+<div data-role="page" id="home" data-title="Home">
+    <div data-role="header" data-position="inline" data-theme="a">
+<p id="notice"><%= notice %></p>
+<%= @local_deportivo.nombre %>
+	</div><!-- /header -->
+    <div data-role="content">
+
+<p>
+  <b>Nombre:</b>
+  <%= @local_deportivo.nombre %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @local_deportivo.direccion %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @local_deportivo.descripcion %>
+</p>
+
+<p>
+  <b>Servicios:</b>
+  <%= @local_deportivo.servicios %>
+</p>
+
+<p>
+  <b>Contacto:</b>
+  <%= @local_deportivo.contacto %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @local_deportivo.telefono %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @local_deportivo.email %>
+</p>
+
+
+    </div><!-- /content -->
+ 
+    <div data-role="footer" data-position="fixed">
+
+<%= link_to 'Editar', edit_local_deportivo_path(@local_deportivo) %> |
+<%= link_to 'Regresar', local_deportivos_path %>
+
+
+    </div><!-- /footer -->
+</div><!-- /page home -->
